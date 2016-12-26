@@ -25,6 +25,7 @@ class UserRepository extends EntityRepository
 
         return $qb->getQuery()->getSingleResult();
     }
+
     public function getUserTasks($user)
     {
         $qb = $this->getEntityManager()->createQueryBuilder();
@@ -33,6 +34,16 @@ class UserRepository extends EntityRepository
             ->join('u.userTasks', 'i')
             ->where($qb->expr()->eq('u.id', ':userId'))
             ->setParameter('userId', $user->getId());
+
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+
+    public function getRandomUser(){
+        $qb = $this->getEntityManager()->createQueryBuilder();
+        $qb->select('u')
+            ->addSelect('RAND() as HIDDEN rand')
+            ->from('AppBundle:User', 'u')
+            ->setMaxResults(1);
 
         return $qb->getQuery()->getOneOrNullResult();
     }

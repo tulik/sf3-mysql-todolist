@@ -69,8 +69,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $userRepository = $em->getRepository('AppBundle:User');
-        $users = $userRepository->findAll();
-        $user = $users[array_rand($users)];
+        $user = $userRepository->getRandomUser();
 
         return $this->render('AppBundle:partials:show_credentials.html.twig', [
             'username' => $user->getUsername(),

@@ -36,7 +36,7 @@ class InitDBCommand extends ContainerAwareCommand
         while(--$count){
             $username = $faker->userName;
             $random_position = rand(0,strlen($username)-1);
-            $chars = "qwertyuiopasdfghjklzxcvbnm";
+            $chars = "qwertyuiopasdfghjklzxcvbnm01234567890";
             $random_char = $chars[rand(0,strlen($chars)-1)];
             $username = substr($username,0,$random_position).$random_char.substr($username,$random_position);
             $email = $random_char.$faker->email;
