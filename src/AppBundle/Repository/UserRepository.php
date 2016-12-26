@@ -43,8 +43,9 @@ class UserRepository extends EntityRepository
         $qb->select('u')
             ->addSelect('RAND() as HIDDEN rand')
             ->from('AppBundle:User', 'u')
+            ->orderBy('rand')
             ->setMaxResults(1);
 
-        return $qb->getQuery()->getOneOrNullResult();
+        return $qb->getQuery()->useQueryCache(false)->getOneOrNullResult();
     }
 }
