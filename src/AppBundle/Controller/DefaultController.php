@@ -76,7 +76,10 @@ class DefaultController extends Controller
             'username' => $user->getUsername(),
             'password' => $user->getUsername(),
         ]);
+    }
 
-
+    public function aboutAction()
+    {
+        return $this->render('AppBundle:default:about.html.twig');
     }
 }

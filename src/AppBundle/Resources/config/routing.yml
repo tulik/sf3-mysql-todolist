@@ -12,9 +12,9 @@ delete:
     defaults: { _controller: AppBundle:Default:deleteItem }
     methods: [POST]
 
-statistics:
-    path: /statistics
-    defaults: { _controller: AppBundle:Statistics:index }
+about:
+    path: /about
+    defaults: { _controller: AppBundle:Default:about }
 
 footer_modal:
     path: /modal/footer_modal
