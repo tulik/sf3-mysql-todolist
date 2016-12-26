@@ -121,7 +121,7 @@
 </footer>
 <div id="timer" class="col-lg-3 col-md-4 col-sm-5 offset-lg-9 offset-md-8 offset-sm-7 offset-xs-6 alert alert-info navbar-fixed-bottom timer small" role="alert">
     <i class="fa fa-database" aria-hidden="true"></i>&nbsp;
-    Query time: <strong>{{ query_time()|number_format(2) }} ms</strong>
+    <strong>{{ query_count() }}</strong> queries in: <strong>{{ query_time() }} ms</strong>
     <br/>
     <i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;
     Total time: <strong>{{ request_time() }} ms</strong>

@@ -32,19 +32,42 @@ class AppExtension extends \Twig_Extension
         return [
             new \Twig_SimpleFunction('request_time', [$this, 'requestTime'], ['is_safe' => ['html']]),
             new \Twig_SimpleFunction('query_time', [$this, 'queryTime'], ['is_safe' => ['html']]),
+            new \Twig_SimpleFunction('query_count', [$this, 'queryCount'], ['is_safe' => ['html']]),
             new \Twig_SimpleFunction('user_count', [$this, 'userCount'], ['is_safe' => ['html']]),
             new \Twig_SimpleFunction('task_count', [$this, 'taskCount'], ['is_safe' => ['html']]),
         ];
     }
 
+    /**
+     * Returns application execution time
+     *
+     * @param int $decimals
+     * @return string
+     */
     public function requestTime($decimals = 0)
     {
         return number_format((microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'])*1000, $decimals);
     }
 
-    public function queryTime()
+    /**
+     * Returns doctrine query execution time
+     *
+     * @param int $decimals
+     * @return string
+     */
+    public function queryTime($decimals = 2)
     {
-            return array_sum(array_column($this->debugStack->queries, 'executionMS'))*1000;
+            return number_format(array_sum(array_column($this->debugStack->queries, 'executionMS'))*1000, $decimals);
+    }
+
+    /**
+     * Returns doctrine query count
+     *
+     * @return string
+     */
+    public function queryCount()
+    {
+            return count($this->debugStack->queries);
     }
 
     public function userCount()
