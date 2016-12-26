@@ -21,7 +21,7 @@ body {
     background: url('../img/mysql.png') no-repeat center;
     -webkit-background-size: contain;
     background-size: contain;
-    opacity: .1;
+    opacity: .3;
     content: "";
     z-index: -1;
 }

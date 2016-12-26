@@ -1,7 +1,7 @@
 services:
     app.twig_extension:
         class: AppBundle\Twig\AppExtension
-        arguments: ["@doctrine.orm.default_entity_manager"]
+        arguments: ["@doctrine.orm.default_entity_manager", "@doctrine.dbal.logger.profiling.default"]
         public: false
         tags:
             - { name: twig.extension }

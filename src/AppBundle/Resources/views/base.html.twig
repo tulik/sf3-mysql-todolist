@@ -53,12 +53,13 @@
 </nav>
 <div class="container">
     <div class="template-starter">
-        <div class="alert alert-info" role="alert">
-            <div class="row">
-                <div class="col-xs-1 col-sm-1"><i class="fa fa-database" aria-hidden="true"></i></div>
-                <div class="col-sm-3 hidden-xs-down"><strong>Mysql info</strong></div>
-                <div class="col-xs-5 col-sm-4 text-sm-center"><strong>User count:</strong> {{ user_count()|number_format }}</div>
-                <div class="col-xs-5 col-sm-4 text-xs-center"><strong>Task count:</strong> {{ task_count()|number_format }}</div>
+        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+            <div class="alert alert-info small" role="alert">
+                <div class="row">
+                    <div class="col-xs-1 col-sm-1"><i class="fa fa-database" aria-hidden="true"></i></div>
+                    <div class="col-xs-5"><strong>User count:</strong> {{ user_count()|number_format }}</div>
+                    <div class="col-xs-5"><strong>Task count:</strong> {{ task_count()|number_format }}</div>
+                </div>
             </div>
         </div>
         <br />
@@ -118,9 +119,12 @@
         </div>
     </div>
 </footer>
-<div id="timer" class="col-lg-3 col-md-4 col-sm-5 offset-lg-9 offset-md-8 offset-sm-7 offset-xs-6 alert alert-success navbar-fixed-bottom timer" role="alert">
-    <i class="fa fa-th" aria-hidden="true"></i>&nbsp;
-    Benchmark time: <strong class="text-xs-left">{{ request_time() }} ms</strong>
+<div id="timer" class="col-lg-3 col-md-4 col-sm-5 offset-lg-9 offset-md-8 offset-sm-7 offset-xs-6 alert alert-info navbar-fixed-bottom timer small" role="alert">
+    <i class="fa fa-database" aria-hidden="true"></i>&nbsp;
+    Query time: <strong>{{ query_time()|number_format(2) }} ms</strong>
+    <br/>
+    <i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;
+    Total time: <strong>{{ request_time() }} ms</strong>
 </div>
 
 <div class="modal fade" id="modalWindow" tabindex="-1" role="dialog" aria-hidden="true">

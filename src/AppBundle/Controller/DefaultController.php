@@ -3,13 +3,14 @@
 namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Entity\Task;
 use AppBundle\Form\TaskType;
+use Doctrine\DBAL\Logging\DebugStack;
 
 class DefaultController extends Controller
 {
+
     public function indexAction(Request $request)
     {
         $user = $this->getUser();
@@ -38,7 +39,6 @@ class DefaultController extends Controller
             $em->flush();
             return $this->redirectToRoute('homepage');
         }
-
         return $this->render('AppBundle:default:index.html.twig', [
             'form' => $form->createView(),
             'tasks' => $tasks,
