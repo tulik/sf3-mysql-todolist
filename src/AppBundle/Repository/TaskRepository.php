@@ -14,4 +14,16 @@ class TaskRepository extends EntityRepository
 
         return $qb->getQuery()->getSingleScalarResult();
     }
+    public function getLastTask($user)
+    {
+        $qb = $this->getEntityManager()->createQueryBuilder();
+        $qb->select('t.itemId')
+            ->from('AppBundle:Task', 't')
+            ->where($qb->expr()->eq('t.userId', ':userId'))
+            ->setParameter('userId', $user->getId())
+            ->addOrderBy('t.itemId', 'desc')
+            ->setMaxResults(1);
+
+        return $qb->getQuery()->getSingleResult();
+    }
 }

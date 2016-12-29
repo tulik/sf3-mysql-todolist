@@ -6,7 +6,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Entity\Task;
 use AppBundle\Form\TaskType;
-use Doctrine\DBAL\Logging\DebugStack;
 
 class DefaultController extends Controller
 {
@@ -16,20 +15,18 @@ class DefaultController extends Controller
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
         $userRepository = $em->getRepository('AppBundle:User');
+        $taskRepository = $em->getRepository('AppBundle:Task');
         $user = $userRepository->getUserTasks($user);
-        $tasks = [];
-        $nextTaskId = 1;
-        if(!is_null($user)){
-            $tasks = $user->getUserTasks();
-            $nextTaskId = $tasks[sizeof($tasks)-1]->getItemId() + 1;
-        }
+        $tasks = $user->getUserTasks();
+        $taskId = $taskRepository->getLastTask($user)['itemId'];
+
         $task = new Task();
         $form = $this->createForm(TaskType::class, $task);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $task = $form->getData();
             $task->setUserId($this->getUser());
-            $task->setItemId($nextTaskId);
+            $task->setItemId(++$taskId);
             $task->setScheduled(new \DateTime(date('Y-m-d H:i:s', strtotime($task->getScheduled()))));
             $task->setCompletion(new \DateTime());
             $task->setTimestamp(new \DateTime());
