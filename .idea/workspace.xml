@@ -94,13 +94,11 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="33" column="44" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="191" selection-end-column="7" />
+            <state relative-caret-position="435">
+              <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
               <folding>
-                <element signature="e#1929#1935#0#HTML" expanded="true" />
-                <element signature="e#1935#1941#0#HTML" expanded="true" />
-                <element signature="e#1989#1995#0#HTML" expanded="true" />
-                <element signature="e#1995#2001#0#HTML" expanded="true" />
+                <element signature="e#1994#2000#0#HTML" expanded="true" />
+                <element signature="e#2000#2006#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -303,12 +301,12 @@
       <updated>1482882229130</updated>
       <workItem from="1482882230526" duration="554000" />
       <workItem from="1482977353137" duration="4731000" />
-      <workItem from="1484434730422" duration="651000" />
+      <workItem from="1484434730422" duration="832000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5936000" />
+    <option name="totallyTimeSpent" value="6117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="790" extended-state="6" />
@@ -409,10 +407,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1929#1935#0#HTML" expanded="true" />
-            <element signature="e#1935#1941#0#HTML" expanded="true" />
-            <element signature="e#1989#1995#0#HTML" expanded="true" />
-            <element signature="e#1995#2001#0#HTML" expanded="true" />
+            <element signature="e#1994#2000#0#HTML" expanded="true" />
+            <element signature="e#2000#2006#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -594,13 +590,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="33" column="44" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="191" selection-end-column="7" />
+        <state relative-caret-position="435">
+          <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
           <folding>
-            <element signature="e#1929#1935#0#HTML" expanded="true" />
-            <element signature="e#1935#1941#0#HTML" expanded="true" />
-            <element signature="e#1989#1995#0#HTML" expanded="true" />
-            <element signature="e#1995#2001#0#HTML" expanded="true" />
+            <element signature="e#1994#2000#0#HTML" expanded="true" />
+            <element signature="e#2000#2006#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
