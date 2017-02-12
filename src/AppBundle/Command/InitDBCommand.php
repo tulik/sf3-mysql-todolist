@@ -29,17 +29,13 @@ class InitDBCommand extends ContainerAwareCommand
         $this->createUsers($input->getOption('count'));
     }
     private function createUsers($count){
-        $em = $this->getContainer()->get('doctrine')->getEntityManager();
+        $em = $this->getContainer()->get('doctrine.orm.entity_manager');
         $userRepository = $em->getRepository('AppBundle:User');
         $faker = Faker\Factory::create();
 
-        while(--$count){
-            $username = $faker->userName;
-            $random_position = rand(0,strlen($username)-1);
-            $chars = "qwertyuiopasdfghjklzxcvbnm01234567890";
-            $random_char = $chars[rand(0,strlen($chars)-1)];
-            $username = substr($username,0,$random_position).$random_char.substr($username,$random_position);
-            $email = $random_char.$faker->email;
+        while($count--){
+            $username = $faker->unique()->userName();
+            $email = $faker->unique()->email;
             $password = $username;
             $manipulator = $this->getContainer()->get('fos_user.util.user_manipulator');
             $manipulator->create($username, $password, $email, true, false);
@@ -55,8 +51,9 @@ class InitDBCommand extends ContainerAwareCommand
 
     }
     private function addItem($user, $taskId, $done){
-        $em = $this->getContainer()->get('doctrine')->getEntityManager();
+        $em = $this->getContainer()->get('doctrine.orm.entity_manager');
         $faker = Faker\Factory::create();
+        
         $task = new Task();
         $task->setUserId($user);
         $task->setItemId($taskId);
@@ -65,6 +62,8 @@ class InitDBCommand extends ContainerAwareCommand
         $task->setValue($faker->sentence($nbWords = 6, $variableNbWords = true));
         $task->setCompletion(new \DateTime());
         $task->setDone($done);
+        
         $em->persist($task);
+        $em->flush();
     }
 }
