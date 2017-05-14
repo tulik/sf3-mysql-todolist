@@ -38,7 +38,8 @@ class UserRepository extends EntityRepository
         return $qb->getQuery()->getOneOrNullResult();
     }
 
-    public function getRandomUser(){
+    public function getRandomUser()
+    {
         $qb = $this->getEntityManager()->createQueryBuilder();
         $qb->select('u')
             ->addSelect('RAND() as HIDDEN rand')

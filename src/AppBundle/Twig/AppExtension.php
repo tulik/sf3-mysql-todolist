@@ -21,7 +21,7 @@ class AppExtension extends \Twig_Extension
      * AppExtension constructor.
      * @param EntityManager $entityManager
      */
-    function __construct(EntityManager $entityManager, DebugStack $debugStack)
+    public function __construct(EntityManager $entityManager, DebugStack $debugStack)
     {
         $this->entityManager = $entityManager;
         $this->debugStack = $debugStack;
@@ -57,7 +57,7 @@ class AppExtension extends \Twig_Extension
      */
     public function queryTime($decimals = 2)
     {
-            return number_format(array_sum(array_column($this->debugStack->queries, 'executionMS'))*1000, $decimals);
+        return number_format(array_sum(array_column($this->debugStack->queries, 'executionMS'))*1000, $decimals);
     }
 
     /**
@@ -67,7 +67,7 @@ class AppExtension extends \Twig_Extension
      */
     public function queryCount()
     {
-            return count($this->debugStack->queries);
+        return count($this->debugStack->queries);
     }
 
     public function userCount()

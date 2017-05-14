@@ -9,7 +9,6 @@ use AppBundle\Form\TaskType;
 
 class DefaultController extends Controller
 {
-
     public function indexAction(Request $request)
     {
         $user = $this->getUser();
