@@ -1,5 +1,3 @@
-#IDE
-/.idea/
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
@@ -51,3 +49,9 @@
 
 #IDE settings
 .idea
+
+# build
+!build/phpmd.xml
+!build/phpunit.xml
+!build/phpdox.xml
+build/*
