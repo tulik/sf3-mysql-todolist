@@ -120,7 +120,7 @@
     </target>
 
     <target name="phpcbd" description="Aggregate tool output with PHP_CodeBrowser">
-        <exec executable="phpcb">
+        <exec executable="phpcbd">
             <arg value="--log" />
             <arg path="${basedir}/build/logs" />
             <arg value="--source" />
