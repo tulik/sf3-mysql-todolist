@@ -39,7 +39,7 @@
         "sebastian/phpcpd": "3.*",
         "mayflower/php-codebrowser": "~1.1",
         "pdepend/pdepend": "~2.5",
-        "phploc/phploc": "4.*",
+        "phploc/phploc": "4.*"
 
     },
     "scripts": {
