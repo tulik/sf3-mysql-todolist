@@ -233,15 +233,5 @@
 
         <property name="phpdox.done" value="true"/>
     </target>
-
-    <target name="-check-failure">
-        <fail message="PHPUnit did not finish successfully">
-            <condition>
-                <not>
-                    <equals arg1="${result.phpunit}" arg2="0"/>
-                </not>
-            </condition>
-        </fail>
-    </target>
 </project>
 
