@@ -79,4 +79,6 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: AppBundle\Entity\User
-    from_email: todolist@tulik.info
+    from_email:
+        address:        noreply@tulik.info
+        sender_name:    SF Mysql Todolist
