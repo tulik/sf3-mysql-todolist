@@ -39,7 +39,6 @@
         "mayflower/php-codebrowser": "~1.1",
         "pdepend/pdepend": "~2.5",
         "phploc/phploc": "4.*",
-        "mayflower/php-codebrowser": "~1.1"
     },
     "scripts": {
         "symfony-scripts": [
