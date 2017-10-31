@@ -4,10 +4,10 @@
     <property name="composer.path" value="${basedir}/composer.phar" />
     <available property="composer.exists" file="${composer.path}" />
     <target name="build"
-            depends="prepare,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpunit,phpcb"/>
+            depends="prepare,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdox,phpunit"/>
 
     <target name="build-parallel"
-            depends="prepare,lint,tools-parallel,phpunit,phpcb"/>
+            depends="prepare,lint,tools-parallel,phpunit"/>
 
     <target name="tools-parallel" description="Run tools in parallel">
         <parallel threadCount="2">
@@ -117,17 +117,6 @@
 
     <target name="phpunit" description="Run unit tests with PHPUnit">
         <exec executable="phpunit" failonerror="true"/>
-    </target>
-
-    <target name="phpcbd" description="Aggregate tool output with PHP_CodeBrowser">
-        <exec executable="phpcb">
-            <arg value="--log" />
-            <arg path="${basedir}/build/logs" />
-            <arg value="--source" />
-            <arg path="${basedir}/src" />
-            <arg value="--output" />
-            <arg path="${basedir}/build/code-browser" />
-        </exec>
     </target>
 
     <target name="vendors" depends="composer">
