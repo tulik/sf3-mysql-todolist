@@ -16,7 +16,7 @@
      <property name="phpdox"  value="${basedir}/build/tools/phpdox.phar"/>
      <property name="phploc"  value="${basedir}/build/tools/phploc.phar"/>
      <property name="phpmd"   value="${basedir}/build/tools/phpmd.phar"/>
-     <property name="phpunit" value="${basedir}/build/tools/phpunit.phar"/>
+     <property name="phpunit" value="${basedir}/build/tools/phpunit.phar"/> 
     -->
     <!--
      Use this when the tools are managed by Composer in ${basedir}/vendor/bin
@@ -26,14 +26,14 @@
      <property name="phpdox"  value="${basedir}/vendor/bin/phpdox"/>
      <property name="phploc"  value="${basedir}/vendor/bin/phploc"/>
      <property name="phpmd"   value="${basedir}/vendor/bin/phpmd"/>
-     <property name="phpunit" value="${basedir}/vendor/bin/phpunit"/>
+     <property name="phpunit" value="${basedir}/vendor/bin/phpunit"/> 
     -->
     <target name="full-build" depends="prepare,static-analysis,phpunit,phpdox,-check-failure" description="Performs static analysis, runs the tests, and generates project documentation"/>
     <target name="full-build-parallel" depends="prepare,static-analysis-parallel,phpunit,phpdox,-check-failure" description="Performs static analysis (executing the tools in parallel), runs the tests, and generates project documentation"/>
     <target name="quick-build" depends="prepare,lint,phpunit-no-coverage" description="Performs a lint check and runs the tests (without generating code coverage reports)"/>
     <target name="static-analysis" depends="lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci" description="Performs static analysis"/>
     <!--
-     Adjust the threadCount attribute's value to the number of CPUs
+     Adjust the threadCount attribute's value to the number of CPUs 
     -->
     <target name="static-analysis-parallel" description="Performs static analysis (executing the tools in parallel)">
         <parallel threadCount="2">
@@ -163,14 +163,14 @@
     <target name="phpunit" unless="phpunit.done" depends="prepare" description="Run unit tests with PHPUnit">
         <exec executable="${phpunit}" resultproperty="result.phpunit" taskname="phpunit">
             <arg value="--configuration"/>
-            <arg path="${basedir}/build/phpunit.xml"/>
+            <arg path="${basedir}/phpunit.dist.xml"/>
         </exec>
         <property name="phpunit.done" value="true"/>
     </target>
     <target name="phpunit-no-coverage" unless="phpunit.done" depends="prepare" description="Run unit tests with PHPUnit (without generating code coverage reports)">
         <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
             <arg value="--configuration"/>
-            <arg path="${basedir}/build/phpunit.xml"/>
+            <arg path="${basedir}/phpunit.dist.xml"/>
             <arg value="--no-coverage"/>
         </exec>
         <property name="phpunit.done" value="true"/>
