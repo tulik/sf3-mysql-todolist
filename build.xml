@@ -119,7 +119,7 @@
         <exec executable="phpunit" failonerror="true"/>
     </target>
 
-    <target name="phpcbd" description="Aggregate tool output with PHP_CodeBrowser">
+    <target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
         <exec executable="phpcb">
             <arg value="--log" />
             <arg path="${basedir}/build/logs" />
