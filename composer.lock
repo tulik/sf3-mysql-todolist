@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c0321a2322379c20aa15daf95819df5",
+    "content-hash": "9e4367cca131fff308c5cdd21e812cfe",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -2180,6 +2180,53 @@
     ],
     "packages-dev": [
         {
+            "name": "btc/phpmd-rulesets",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BTCCTB/phpmd-rulesets.git",
+                "reference": "201194eb975de90b1acb25b099385dd63803f8c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BTCCTB/phpmd-rulesets/zipball/201194eb975de90b1acb25b099385dd63803f8c0",
+                "reference": "201194eb975de90b1acb25b099385dd63803f8c0",
+                "shasum": ""
+            },
+            "require": {
+                "phpmd/phpmd": "^2.5"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "jakub-onderka/php-parallel-lint": "^0.9.2",
+                "leaphub/phpcs-symfony2-standard": "^2.0",
+                "mockery/mockery": "^0.9.7",
+                "nikic/php-parser": "^3.0",
+                "phpro/grumphp": "^0.11.1",
+                "phpunit/phpunit": "^5.7",
+                "sebastian/phpcpd": "^2.0",
+                "symfony/process": "^3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BTC\\PHPMD\\Rule\\": "Rule/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Damien LAGAE",
+                    "email": "damien.lagae@btcctb.org"
+                }
+            ],
+            "description": "Exetnded mess detection rules from phpmd for BTC applications.",
+            "time": "2017-01-20T12:49:50+00:00"
+        },
+        {
             "name": "mayflower/php-codebrowser",
             "version": "1.1.2",
             "source": {
@@ -2610,6 +2657,72 @@
             "description": "A tool for quickly measuring the size of a PHP project.",
             "homepage": "https://github.com/sebastianbergmann/phploc",
             "time": "2017-06-06T13:07:11+00:00"
+        },
+        {
+            "name": "phpmd/phpmd",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpmd/phpmd.git",
+                "reference": "4e9924b2c157a3eb64395460fcf56b31badc8374"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/4e9924b2c157a3eb64395460fcf56b31badc8374",
+                "reference": "4e9924b2c157a3eb64395460fcf56b31badc8374",
+                "shasum": ""
+            },
+            "require": {
+                "ext-xml": "*",
+                "pdepend/pdepend": "^2.5",
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0",
+                "squizlabs/php_codesniffer": "^2.0"
+            },
+            "bin": [
+                "src/bin/phpmd"
+            ],
+            "type": "project",
+            "autoload": {
+                "psr-0": {
+                    "PHPMD\\": "src/main/php"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Manuel Pichler",
+                    "email": "github@manuel-pichler.de",
+                    "homepage": "https://github.com/manuelpichler",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Other contributors",
+                    "homepage": "https://github.com/phpmd/phpmd/graphs/contributors",
+                    "role": "Contributors"
+                },
+                {
+                    "name": "Marc Würth",
+                    "email": "ravage@bluewin.ch",
+                    "homepage": "https://github.com/ravage84",
+                    "role": "Project Maintainer"
+                }
+            ],
+            "description": "PHPMD is a spin-off project of PHP Depend and aims to be a PHP equivalent of the well known Java tool PMD.",
+            "homepage": "http://phpmd.org/",
+            "keywords": [
+                "mess detection",
+                "mess detector",
+                "pdepend",
+                "phpmd",
+                "pmd"
+            ],
+            "time": "2017-01-20T14:41:10+00:00"
         },
         {
             "name": "phpspec/prophecy",
