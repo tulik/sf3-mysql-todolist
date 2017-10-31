@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="name-of-symfony-project" default="build">
+<project name="sf-mysql-todolist" default="build">
     <property name="composer.path" value="${basedir}/composer.phar" />
     <available property="composer.exists" file="${composer.path}" />
     <target name="build"
