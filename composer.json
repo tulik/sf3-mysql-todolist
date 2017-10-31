@@ -36,6 +36,7 @@
         "symfony/phpunit-bridge": "^3.0",
         "squizlabs/php_codesniffer": "3.*",
         "sebastian/phpcpd": "3.*",
+        "mayflower/php-codebrowser": "~1.1",
         "pdepend/pdepend": "~2.5",
         "phploc/phploc": "4.*",
         "mayflower/php-codebrowser": "~1.1"
