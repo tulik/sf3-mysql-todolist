@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbc48e09-4161-421f-adc4-08789988dfe6" name="Default" comment="" />
+    <list default="true" id="cbc48e09-4161-421f-adc4-08789988dfe6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grumphp.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="121" column="23" lean-forward="true" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+            <state relative-caret-position="272">
+              <caret line="121" column="23" lean-forward="false" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grumphp.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grumphp.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -49,7 +62,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="335">
               <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-              <folding />
+              <folding>
+                <marker date="1509490580000" expanded="true" signature="946:1300" ph="{&quot;sensio/generator-bundle&quot;: &quot;^3.0&quot;...}" />
+                <marker date="1509490580000" expanded="true" signature="1317:2048" ph="{...}" />
+                <marker date="1509490580000" expanded="true" signature="1346:1899" ph="[...]" />
+                <marker date="1509490580000" expanded="true" signature="1929:1971" ph="[...]" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,6 +109,7 @@
         <option value="$PROJECT_DIR$/app/autoload.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/grumphp.yml" />
       </list>
     </option>
   </component>
@@ -274,7 +293,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13497000" />
+    <option name="totallyTimeSpent" value="13833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="833" extended-state="0" />
@@ -596,7 +615,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-          <folding />
+          <folding>
+            <marker date="1509490580000" expanded="true" signature="946:1300" ph="{&quot;sensio/generator-bundle&quot;: &quot;^3.0&quot;...}" />
+            <marker date="1509490580000" expanded="true" signature="1317:2048" ph="{...}" />
+            <marker date="1509490580000" expanded="true" signature="1346:1899" ph="[...]" />
+            <marker date="1509490580000" expanded="true" signature="1929:1971" ph="[...]" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -610,8 +634,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="121" column="23" lean-forward="true" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+        <state relative-caret-position="272">
+          <caret line="121" column="23" lean-forward="false" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grumphp.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>

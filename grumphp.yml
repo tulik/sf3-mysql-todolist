@@ -1,0 +1,4 @@
+phpmd:
+    exclude: ['vendor']
+    ruleset: ['/vendor/btc/phpmd-rulesets/Rulesets/symfony.xml', '/vendor/btc/phpmd-rulesets/Rulesets/cleancode.xml']
+    triggered_by: [php]
