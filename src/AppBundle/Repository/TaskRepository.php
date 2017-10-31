@@ -14,6 +14,7 @@ class TaskRepository extends EntityRepository
 
         return $qb->getQuery()->getSingleScalarResult();
     }
+
     public function getLastTask($user)
     {
         $qb = $this->getEntityManager()->createQueryBuilder();

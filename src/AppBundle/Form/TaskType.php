@@ -1,4 +1,5 @@
 <?php
+
 namespace AppBundle\Form;
 
 use AppBundle\Entity\Task;
@@ -13,10 +14,10 @@ class TaskType extends AbstractType
     {
         $builder
             ->add('value', TextType::class, [
-                'label' => 'What:'
+                'label' => 'What:',
                     ])
             ->add('scheduled', TextType::class, [
-                'label' => 'When:'
+                'label' => 'When:',
             ])
         ;
     }

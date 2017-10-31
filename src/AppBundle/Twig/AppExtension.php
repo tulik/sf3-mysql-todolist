@@ -19,6 +19,7 @@ class AppExtension extends \Twig_Extension
 
     /**
      * AppExtension constructor.
+     *
      * @param EntityManager $entityManager
      */
     public function __construct(EntityManager $entityManager, DebugStack $debugStack)
@@ -39,29 +40,31 @@ class AppExtension extends \Twig_Extension
     }
 
     /**
-     * Returns application execution time
+     * Returns application execution time.
      *
      * @param int $decimals
+     *
      * @return string
      */
     public function requestTime($decimals = 0)
     {
-        return number_format((microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'])*1000, $decimals);
+        return number_format((microtime(true) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000, $decimals);
     }
 
     /**
-     * Returns doctrine query execution time
+     * Returns doctrine query execution time.
      *
      * @param int $decimals
+     *
      * @return string
      */
     public function queryTime($decimals = 2)
     {
-        return number_format(array_sum(array_column($this->debugStack->queries, 'executionMS'))*1000, $decimals);
+        return number_format(array_sum(array_column($this->debugStack->queries, 'executionMS')) * 1000, $decimals);
     }
 
     /**
-     * Returns doctrine query count
+     * Returns doctrine query count.
      *
      * @return string
      */

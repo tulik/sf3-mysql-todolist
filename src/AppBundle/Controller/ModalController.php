@@ -35,7 +35,7 @@ class ModalController extends Controller
                 $task = new Task();
                 $task->setUserId($user);
                 $task->setItemId(++$taskId);
-                $task->setScheduled(new \DateTime(date('Y-m-d H:i:s', strtotime('+'.mt_rand(0, 30).' days '.mt_rand(0, 24). ' hours '.mt_rand(0, 60).' minutes'))));
+                $task->setScheduled(new \DateTime(date('Y-m-d H:i:s', strtotime('+'.mt_rand(0, 30).' days '.mt_rand(0, 24).' hours '.mt_rand(0, 60).' minutes'))));
                 $task->setTimestamp(new \DateTime());
                 $task->setValue($faker->sentence($nbWords = 6, $variableNbWords = true));
                 $task->setCompletion(new \DateTime());
@@ -43,6 +43,7 @@ class ModalController extends Controller
                 $em->persist($task);
             }
             $em->flush();
+
             return $this->redirectToRoute('homepage');
         }
 

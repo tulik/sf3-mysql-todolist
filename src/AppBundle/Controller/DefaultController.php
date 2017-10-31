@@ -33,8 +33,10 @@ class DefaultController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($task);
             $em->flush();
+
             return $this->redirectToRoute('homepage');
         }
+
         return $this->render('AppBundle:default:index.html.twig', [
             'form' => $form->createView(),
             'tasks' => $tasks,

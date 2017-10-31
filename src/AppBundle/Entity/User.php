@@ -1,4 +1,5 @@
 <?php
+
 namespace AppBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
@@ -22,8 +23,6 @@ class User extends BaseUser
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     protected $userTasks;
-
-
 
     public function __construct()
     {

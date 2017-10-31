@@ -131,7 +131,7 @@
     </target>
 
     <target name="vendors" depends="composer">
-        <exec executable="${basedir}/composer.phar" failonerror="true">
+        <exec executable="composer" failonerror="true">
             <arg value="install" />
         </exec>
     </target>
